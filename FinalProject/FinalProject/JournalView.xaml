@@ -10,13 +10,14 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemSelected="OnJournalItemSelected" x:Name="JournalList">
+            <ListView ItemSelected="OnJournalItemSelected" x:Name="JournalList" AutomationProperties.IsInAccessibleTree="True" AutomationProperties.Name="Journal Item List">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
+                        <ViewCell AutomationProperties.IsInAccessibleTree="True" AutomationProperties.HelpText="Journal Item: " AutomationProperties.Name="Journal Item">
                             
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding StellarObject}"></Label>
+                                <Label Text="{Binding StellarObject}" Padding="10"></Label>
+                                <Label Text="{Binding Time}"/>
                             </StackLayout>
                             
                         </ViewCell>

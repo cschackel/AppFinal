@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
             xmlns:local="clr-namespace:FinalProject"
-             x:Class="FinalProject.TabbedPage1">
+             x:Class="FinalProject.TabbedPage1"
+            Title="Stargazer Pro">
   <!--Pages can be added as references or inline-->
     <!--
   <ContentPage Title="Journal" IconImageSource="book"/>

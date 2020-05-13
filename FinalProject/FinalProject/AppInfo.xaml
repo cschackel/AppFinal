@@ -12,7 +12,8 @@
         <StackLayout>
             <Label Text="App Created on May 10th, 2020 by Cyrus Lee Schackel. All Rights reserved."
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="Large"/>
             <Label Text="Icons made by Freepik from www.flaticon.com"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,9 +20,22 @@ namespace FinalProject
         async private void Button_Clicked(object sender, EventArgs e)
         {
             var newEntry = (StargazingJournalEntry)BindingContext;
-            //await DisplayAlert("ID", ""+newEntry.JournalID, "OK");
-            await App.Database.SaveItemAsync(newEntry);
-            await Navigation.PopAsync();
+            await DisplayAlert("ID", ""+newEntry.JournalID + " " + newEntry.StellarObject, "OK");
+
+            String stelarOb = newEntry.StellarObject;
+
+
+            if (stelarOb==null)
+            {
+                Vibration.Vibrate();
+                await DisplayAlert("Insufficient Data!", "Please enter a Stellar Object", "OK");
+            }
+            else
+            {
+                await App.Database.SaveItemAsync(newEntry);
+                await Navigation.PopAsync();
+            }
+            
         }
 
         async private void Button_Clicked_1(object sender, EventArgs e)
