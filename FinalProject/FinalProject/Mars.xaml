@@ -10,7 +10,6 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <Image Source="gear.png" x:Name="imagePane"></Image>
             <ListView x:Name="PicList" ItemSelected="PicList_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
