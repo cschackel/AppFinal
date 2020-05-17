@@ -8,10 +8,12 @@ namespace FinalProject
     {
         private static FinalDatabase database;
 
+        public static IRestService restService;
+
         public App()
         {
             InitializeComponent();
-
+            restService = new RestService();
             MainPage = new NavigationPage(new TabbedPage1());
         }
 

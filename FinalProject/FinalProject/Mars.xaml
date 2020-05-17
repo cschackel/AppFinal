@@ -10,9 +10,26 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="gear.png" x:Name="imagePane"></Image>
+            <ListView x:Name="PicList" ItemSelected="PicList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Rover Name: "/>
+                                <Label Text="{Binding RoverData.Name}"/>
+                                <Label Text="Martian Sol: "/>
+                                <Label Text="{Binding Sol}"/>
+                                <Label Text="ID: "/>
+                                <Label Text="{Binding PhotoID}"/>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <DatePicker x:Name="targetDatePicker"></DatePicker>
+            <Button Text="Get Pictures" Clicked="OnListGet"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
