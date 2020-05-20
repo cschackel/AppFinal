@@ -12,9 +12,9 @@ namespace FinalProject
 
         public DateTime Time { get; set; }
 
-        public double Lat { get; set; }
+        public double? Lat { get; set; }
 
-        public double Long { get; set; }
+        public double? Long { get; set; }
 
         public String SkyConditions { get; set; }
 
@@ -24,7 +24,7 @@ namespace FinalProject
 
         public String StellarObject { get; set; }
 
-        public double PositionAngle { get; set; }
+        public double? PositionAngle { get; set; }
 
     }
 }

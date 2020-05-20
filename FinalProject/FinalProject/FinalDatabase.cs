@@ -60,6 +60,7 @@ namespace FinalProject
         {
             if (item.JournalID != 0)
             {
+                var temp = item;
                 return Database.UpdateAsync(item);
             }
             else

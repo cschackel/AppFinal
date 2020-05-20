@@ -14,6 +14,7 @@ public class SplashActivity : AppCompatActivity
     public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
     {
         base.OnCreate(savedInstanceState, persistentState);
+        Xamarin.Essentials.Platform.Init(this, savedInstanceState); // add this line to your code, it may also be called: bundle
         Log.Debug(TAG, "SplashActivity.OnCreate");
     }
 
@@ -32,5 +33,12 @@ public class SplashActivity : AppCompatActivity
         await Task.Delay(8000); // Simulate a bit of startup work.
         Log.Debug(TAG, "Startup work is finished - starting MainActivity.");
         StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+    }
+
+    public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
+    {
+        Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }

@@ -8,7 +8,7 @@ namespace FinalProject
 {
     class Constants
     {
-        public const string DatabaseFilename = "FinalSQLiteStar.db3";
+        public const string DatabaseFilename = "FinalSQLiteStargazer.db3";
 
         
 

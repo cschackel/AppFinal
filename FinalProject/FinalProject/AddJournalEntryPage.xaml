@@ -6,38 +6,40 @@
              mc:Ignorable="d"
              x:Class="FinalProject.AddJournalEntryPage">
     <ContentPage.Content>
-        <StackLayout>
-            
-            <Label Text="Stellar Object"/>
-            <Entry Placeholder="Object Name" Text="{Binding StellarObject}"></Entry>
-            <StackLayout Orientation="Horizontal">
-                <StackLayout Orientation="Vertical">
-                    <Label Text="Latitude"></Label>
-                    <Entry Keyboard="Numeric" Text="{Binding Lat}"/>
-                </StackLayout>
-                <StackLayout Orientation="Vertical">
-                    <Label Text="Longitude"></Label>
-                    <Entry Keyboard="Numeric" Text="{Binding Long}"/>
-                </StackLayout>
-            </StackLayout>
-            <Label Text="Telescope Type"/>
-            <Entry Placeholder="Telescope Type" Text="{Binding TelescopeType}"></Entry>
-            <Label Text="Magnification"></Label>
-            <Entry Keyboard="Numeric" Text="{Binding TelescopeMagnification}"/>
-            <Label Text="Sky Conditions"/>
-            <Entry Placeholder="Sky Conditions" Text="{Binding SkyConditions}"></Entry>
-            <Label Text="Position Angle"></Label>
-            <Entry Keyboard="Numeric" Text="{Binding PositionAngle}"/>
-            <Label Text="Date and Time"></Label>
-            <DatePicker Date="{Binding Time}"/>
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Save" Clicked="Button_Clicked"/>
-                <Button Text="Cancel" Clicked="Button_Clicked_1"/>
-                <Button Text="Delete" Clicked="OnDeleteClicked"/>
-                <Button Text="Remove All" Clicked="Button_Clicked_2"/>
-            </StackLayout>
-            
+        <ScrollView>
+            <StackLayout>
 
-        </StackLayout>
+                <Label Text="Stellar Object"/>
+                <Entry Placeholder="Object Name" Text="{Binding StellarObject}"></Entry>
+                <StackLayout Orientation="Horizontal" Spacing="20">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Latitude"></Label>
+                        <Entry Keyboard="Numeric" Text="{Binding Lat}" x:Name="latEntry" MinimumWidthRequest="300" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Longitude"></Label>
+                        <Entry Keyboard="Numeric" Text="{Binding Long}" x:Name="longEntry" MinimumWidthRequest="300"/>
+                    </StackLayout>
+                </StackLayout>
+                <Label Text="Telescope Type"/>
+                <Entry Placeholder="Telescope Type" Text="{Binding TelescopeType}"></Entry>
+                <Label Text="Magnification"></Label>
+                <Entry Keyboard="Numeric" Text="{Binding TelescopeMagnification}"/>
+                <Label Text="Sky Conditions"/>
+                <Entry Placeholder="Sky Conditions" Text="{Binding SkyConditions}"></Entry>
+                <Label Text="Position Angle"></Label>
+                <Entry Keyboard="Numeric" Text="{Binding PositionAngle}"/>
+                <Label Text="Date and Time"></Label>
+                <DatePicker Date="{Binding Time}" x:Name="dateEntry"/>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Save" Clicked="Button_Clicked"/>
+                    <Button Text="Cancel" Clicked="Button_Clicked_1"/>
+                    <Button Text="Delete" Clicked="OnDeleteClicked"/>
+                    <Button Text="Remove All" Clicked="Button_Clicked_2"/>
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
